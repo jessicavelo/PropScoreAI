@@ -1,0 +1,27 @@
+# ALLOWLIST: ignore everything, then opt code back in.
+# This folder holds API keys (.env), licensed PropertyRadar/LandVision/PropStream
+# exports, owner PII (names, phones, emails) in every CSV/XLSX/HTML output, and
+# ~700MB of Street View photos. None of that belongs in git.
+*
+!*/
+
+# --- code ---
+!/*.py
+!/combined_opportunity_scoring/*.py
+!/business_opportunity_scoring/*.py
+!/business_opportunity_scoring/requirements.txt
+!/atherton_opportunity_scoring/*.py
+!/PropScoreAI/functions/**
+
+# --- docs / repo meta ---
+!/.gitignore
+!/README.md
+!/BUSINESS_DATA_IDEAS.md
+!/.env.example
+
+# never, even if a rule above would match
+.env
+**/.env
+**/__pycache__/
+**/.wrangler/
+wrangler.toml
